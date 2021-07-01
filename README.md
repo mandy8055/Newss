@@ -40,4 +40,10 @@ In your `AndroidManifest.xml` add the below permissions:
 ```
 
 ### 4. Tinkering with layouts and colors
-   #### 4.1. 
+   1. Adding colors.xml from this [gist](https://gist.github.com/sghael/2930380#file-colors-xml).
+   2. [TO ADD]
+### 5. Setup for consuming the API
+   1. The first thing is to create a `model` package and in that package creating a `class` which consumes the `json` response in java.
+        - We use `@SerializedName("name_of_field_in_json_file")` annotation **when the `json` property name is different than our variable or field name.**
+        - We use `@Expose` to allow or disallow serialization. It is optional. [This](https://stackoverflow.com/a/52221102) answer is worth reading.
+        - Next thing is generating the getters for each and every field.   
